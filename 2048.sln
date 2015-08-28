@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2048", "2048\2048.csproj", "{88C6C767-93DF-40BC-9BDC-969017475CA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{D1A199F6-D055-4691-A9E9-706032B342D3}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://helloworld89.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = 2048\\2048.csproj
+		SccProjectName1 = 2048
+		SccLocalPath1 = 2048
+		SccProjectUniqueName2 = Core\\Core.csproj
+		SccProjectName2 = Core
+		SccLocalPath2 = Core
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88C6C767-93DF-40BC-9BDC-969017475CA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88C6C767-93DF-40BC-9BDC-969017475CA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88C6C767-93DF-40BC-9BDC-969017475CA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88C6C767-93DF-40BC-9BDC-969017475CA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1A199F6-D055-4691-A9E9-706032B342D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1A199F6-D055-4691-A9E9-706032B342D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1A199F6-D055-4691-A9E9-706032B342D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1A199F6-D055-4691-A9E9-706032B342D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
