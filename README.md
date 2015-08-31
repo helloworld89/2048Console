@@ -1,6 +1,7 @@
 # 2048Console
 
 2048 is an easy game, and this is my version，without refering to the source code.
+
 This version has two characteristics.
 
 1. This Game is a Console application, but it's view looks like the windows form. 
