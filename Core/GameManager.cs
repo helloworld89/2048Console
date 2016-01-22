@@ -1,5 +1,4 @@
-﻿
-namespace _2048
+﻿namespace _2048
 {
     public class GameManager
     {

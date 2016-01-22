@@ -6,12 +6,13 @@ using System.Runtime.InteropServices;
 
 namespace _2048
 {
-    class ColorSetter
+    internal class ColorSetter
     {
         public ColorSetter()
         {
             //BColor = Color.LightBlue;
         }
+
         [StructLayout(LayoutKind.Sequential)]
         internal struct COORD
         {
@@ -84,7 +85,7 @@ namespace _2048
             internal COLORREF white;
         }
 
-        const int STD_OUTPUT_HANDLE = -11;                                        // per WinBase.h
+        private const int STD_OUTPUT_HANDLE = -11;                                        // per WinBase.h
         internal static readonly IntPtr INVALID_HANDLE_VALUE = new IntPtr(-1);    // per WinBase.h
 
         [DllImport("kernel32.dll", SetLastError = true)]
@@ -127,48 +128,63 @@ namespace _2048
                 case ConsoleColor.Black:
                     currentScreen.black = new COLORREF(r, g, b);
                     break;
+
                 case ConsoleColor.DarkBlue:
                     currentScreen.darkBlue = new COLORREF(r, g, b);
                     break;
+
                 case ConsoleColor.DarkGreen:
                     currentScreen.darkGreen = new COLORREF(r, g, b);
                     break;
+
                 case ConsoleColor.DarkCyan:
                     currentScreen.darkCyan = new COLORREF(r, g, b);
                     break;
+
                 case ConsoleColor.DarkRed:
                     currentScreen.darkRed = new COLORREF(r, g, b);
                     break;
+
                 case ConsoleColor.DarkMagenta:
                     currentScreen.darkMagenta = new COLORREF(r, g, b);
                     break;
+
                 case ConsoleColor.DarkYellow:
                     currentScreen.darkYellow = new COLORREF(r, g, b);
                     break;
+
                 case ConsoleColor.Gray:
                     currentScreen.gray = new COLORREF(r, g, b);
                     break;
+
                 case ConsoleColor.DarkGray:
                     currentScreen.darkGray = new COLORREF(r, g, b);
                     break;
+
                 case ConsoleColor.Blue:
                     currentScreen.blue = new COLORREF(r, g, b);
                     break;
+
                 case ConsoleColor.Green:
                     currentScreen.green = new COLORREF(r, g, b);
                     break;
+
                 case ConsoleColor.Cyan:
                     currentScreen.cyan = new COLORREF(r, g, b);
                     break;
+
                 case ConsoleColor.Red:
                     currentScreen.red = new COLORREF(r, g, b);
                     break;
+
                 case ConsoleColor.Magenta:
                     currentScreen.magenta = new COLORREF(r, g, b);
                     break;
+
                 case ConsoleColor.Yellow:
                     currentScreen.yellow = new COLORREF(r, g, b);
                     break;
+
                 case ConsoleColor.White:
                     currentScreen.white = new COLORREF(r, g, b);
                     break;
@@ -187,7 +203,8 @@ namespace _2048
         public static Color BackgroundColor { set { Console.BackgroundColor = GetColor(value); } }
         public static Color ForegroundColor { set { Console.ForegroundColor = GetColor(value); } }
 
-        static Dictionary<Color, ConsoleColor> _colorDic = new Dictionary<Color, ConsoleColor>();
+        private static Dictionary<Color, ConsoleColor> _colorDic = new Dictionary<Color, ConsoleColor>();
+
         public static ConsoleColor GetColor(Color color)
         {
             if (!_colorDic.Keys.Contains(color))
@@ -199,12 +216,12 @@ namespace _2048
             return _colorDic[color];
         }
 
-        static int _currentColor = 1;
+        private static int _currentColor = 1;
+
         private static ConsoleColor GetConsoleColor()
         {
             _currentColor = _currentColor == 16 ? 1 : _currentColor;
             return (ConsoleColor)_currentColor++;
         }
-
     }
 }

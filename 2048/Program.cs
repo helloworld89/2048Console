@@ -5,11 +5,11 @@ using System.Threading;
 
 namespace _2048
 {
-    class Program
+    internal class Program
     {
-        static GameManager _gameManager = new GameManager();
+        private static GameManager _gameManager = new GameManager();
 
-        static Dictionary<ConsoleKey, DirectionEnum> _consoleKeyDic = new Dictionary<ConsoleKey, DirectionEnum>()
+        private static Dictionary<ConsoleKey, DirectionEnum> _consoleKeyDic = new Dictionary<ConsoleKey, DirectionEnum>()
         {
             {ConsoleKey.UpArrow,DirectionEnum.Up},
             {ConsoleKey.DownArrow,DirectionEnum.Down},
@@ -17,7 +17,7 @@ namespace _2048
             {ConsoleKey.RightArrow,DirectionEnum.Right}
         };
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.Title = "2048";
             Console.BufferWidth = Console.WindowWidth = GameConfig.WindowsWidth;

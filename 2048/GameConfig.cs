@@ -1,5 +1,4 @@
-﻿
-namespace _2048
+﻿namespace _2048
 {
     public class GameConfig
     {
@@ -60,15 +59,15 @@ namespace _2048
         {
             get
             {
-                return 4 * 6-2;
+                return 4 * 6 - 2;
             }
         }
 
-        public static string[] ColorStrings = new string[] 
+        public static string[] ColorStrings = new string[]
         {
-            "#776e65", "#3c3a32", "#f9f6f2", "#bbada0", 
-            "#eee4da", "#ede0c8", "#f2b179", "#f59563", 
-            "#f67c5f", "#f65e3b", "#edcf72", "#edcc61", 
+            "#776e65", "#3c3a32", "#f9f6f2", "#bbada0",
+            "#eee4da", "#ede0c8", "#f2b179", "#f59563",
+            "#f67c5f", "#f65e3b", "#edcf72", "#edcc61",
             "#edc850", "#edc53f", "#edc22e", "#3c3a32"
         };
     }

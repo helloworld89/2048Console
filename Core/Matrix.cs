@@ -1,9 +1,9 @@
-﻿
-using Core;
+﻿using Core;
 using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+
 namespace _2048
 {
     public unsafe static class Matrix
@@ -40,9 +40,19 @@ namespace _2048
 
         public static bool HasZero()
         {
-            foreach (var a in Matrix._cells)
+            return HasValue(2048);
+        }
+
+        public static bool Has2048()
+        {
+            return HasValue(2048);
+        }
+
+        private static bool HasValue(int value)
+        {
+            foreach (var i in Matrix._cells)
             {
-                if (a == 0)
+                if (i == value)
                 {
                     return true;
                 }
@@ -50,17 +60,6 @@ namespace _2048
             return false;
         }
 
-        public static bool Has2048()
-        {
-            foreach (var i in Matrix._cells)
-            {
-                if (i == 2048)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
         public static bool IsMoveAble()
         {
             for (int i = 0; i < 4; i++)
